@@ -1,0 +1,299 @@
+body {
+    padding: 0px;
+    margin: 0;
+    color: #590209;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+article:nth-child(n+3) {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+/*Para el header*/
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/*He hecho una clase porque si no se complicaba tener que ir especificando que parrafos quiero*/
+.pequeño {
+    color: black;
+    font-size: 13px;
+}
+
+/*Para las listas*/
+ol {
+    text-align: left;
+}
+
+/*Para la lista dentro del nav*/
+nav>ol {
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*Para todos los elementos de la lista*/
+nav>ol>li {
+    margin: 10px;
+    background-color: #f8f6e9;
+
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/*Los enlaces que esten visitados en el header*/
+li>a:visited {
+    color: #590209;
+}
+
+/*Para la sombra de los elementos*/
+nav>ol>li:hover {
+    box-shadow: 0px 1px #590209;
+}
+
+/*Especifico del ultimo elemento*/
+nav>ol>li:last-of-type {
+    margin: 10px;
+    background-color: #590209;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*Especifico del ultimo elemento*/
+nav>ol>li:last-of-type:hover {
+    box-shadow: 0px 0px #590209;
+
+}
+
+/*Especifico del ultimo elemento*/
+li:last-of-type>a {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Para los dos primeros y el quinto*/
+main>section:nth-child(-n+2),
+section:nth-of-type(5) {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Formateo de los articulos predeterminados*/
+section>article {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f8f6e9;
+}
+
+/*Dentro de el segundo section, el color del articulo*/
+section:nth-of-type(2)>article,
+section:nth-of-type(5)>article {
+    background-color: #ffffff;
+}
+
+/*Dentro de el tercer articulo, los articulos*/
+section:nth-of-type(3)>article {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+/*Dentro de el tercer articulo,formateo distinto al primer article*/
+section:nth-of-type(3)>article:first-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Dentro de el cuarto articulo, los articulos*/
+section:nth-of-type(4)>article {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 25px;
+
+}
+
+/*Dentro de el cuarto articulo,formateo distinto al primer article*/
+section:nth-of-type(4)>article:first-child {
+    flex-direction: column;
+    justify-content: center;
+    line-height: normal;
+    align-items: center;
+}
+
+/*Formulario*/
+section:last-of-type>article {
+    width: 100%;
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 25px;
+
+}
+
+form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+}
+
+form>p {
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+input {
+    width: 49%;
+    box-sizing: border-box;
+    border: #590209 3px solid;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+input:nth-of-type(1),
+input:nth-of-type(6),
+textarea {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    height: 140px;
+    border: #590209 3px solid;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+input:nth-last-of-type(2) {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 2%;
+}
+
+[type="button"] {
+    width: 100%;
+    background-color: #590209;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+[type="button"]:hover {
+    background-color: #FDEACD;
+    color:#590209;
+}
+
+/*Los articulos dentro de los articulos*/
+article>article {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin: 30px;
+}
+
+/*Los nav que esten dentro de un enlace*/
+a>nav {
+    color: #590209;
+    border: 2px #590209 solid;
+    border-radius: 5px;
+    padding: 15px;
+
+}
+
+/*Los nav que esten dentro de un enlace y el mouse este sobre el nav*/
+a>nav:hover {
+    color: white;
+    background-color: #590209;
+}
+
+/*Los atributos que sean alt y tengan el valor banner*/
+[alt="banner"] {
+    opacity: 40%;
+}
+
+/*Las negrita*/
+strong {
+    margin: 10px;
+}
+
+::placeholder {
+    font-family: "Open Sans", sans-serif;
+    color: #5f5354;
+}
+
+
+footer {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: black;
+    color: #f8f6e9;
+    line-height: 60px;
+}
+footer > p:first-of-type{
+    font-family: "Merienda";
+}
